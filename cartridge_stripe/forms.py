@@ -47,7 +47,7 @@ class OrderForm(FormsetForm, DiscountForm):
     card_cvv = forms.CharField(required=False, max_length=4,
         widget=NoNameTextInput())
     card_expiry_month = forms.ChoiceField(required=False, widget=NoNameSelect(),
-        choices=MONTHS.iteritems())
+        choices=MONTHS.items())
     card_expiry_year = forms.ChoiceField(required=False, widget=NoNameSelect(),
         choices=options.ZEBRA_CARD_YEARS_CHOICES)
     last_4_digits = forms.CharField(required=True, min_length=4, max_length=4,
